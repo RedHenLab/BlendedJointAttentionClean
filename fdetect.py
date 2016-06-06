@@ -15,7 +15,7 @@ def webcam_face_detect_frontal():
 	while True:
 		ret, frame = video.read()
 		if ret:
-	        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+			gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 	        for i in range(len(facecascade)):
 	        	faces = facecascade[i].detectMultiScale(gray, 1.1, 5)
 		        # Draw a rectangle around the faces
