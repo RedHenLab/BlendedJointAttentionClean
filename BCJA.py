@@ -1,4 +1,5 @@
 import fdetect
 import getcascades
 
-faceCascades = getcascades.frontal_face()
+frontal_face = getcascades.frontal_face()
+profile_face = getcascades.profile_face()
