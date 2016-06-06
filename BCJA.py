@@ -29,3 +29,5 @@ def get_frontal_face_cascade():
 def get_profile_face_cascade():
 	return getcascades.profile_face()
 
+def get_facial_landmarks():
+	return getcascades.facial_landmarks()
