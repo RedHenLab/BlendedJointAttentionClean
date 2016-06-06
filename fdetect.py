@@ -13,3 +13,24 @@ def webcam_face_detect_frontal(frame):
 	facecascade = getcascades.frontal_face()
 	while True:
 		ret, frame = video_capture(480,640)
+		if ret:
+	        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+	        for i in range(len(facecascade)):
+	        	faces = facecascade[i].detectMultiScale(gray, 1.1, 5)
+
+	        # Draw a rectangle around the faces
+	        for (x, y, w, h) in faces1:
+	            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
+	            roi_gray = gray[y:y+h, x:x+w]
+	            roi_color = frame[y:y+h, x:x+w]
+	        for (x, y, w, h) in faces2:
+	            cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
+	            roi_gray = gray[y:y+h, x:x+w]
+	            roi_color = frame[y:y+h, x:x+w]
+	        # Display the resulting frame
+	        cv2.imshow('Video', frame)
+	        if cv2.waitKey(1) & 0xFF == ord('q'):
+	            break
+	# Release video capture
+	video_capture.release()
+	cv2.destroyAllWindows()
