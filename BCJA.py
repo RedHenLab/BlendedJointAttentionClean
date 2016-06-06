@@ -21,10 +21,18 @@
 import fdetect
 import getcascades
 
-#Returns a 3 element array
-
+# Returns a 3 element array (used for internal functions only)
 def get_frontal_face_cascade():
 	return getcascades.frontal_face()
 
+# Returns a 2 element array (used for internal functions only)
+def get_profile_face_cascade():
+	return getcascades.profile_face()
 
-profile_face = getcascades.profile_face()
+# Returns a 2 element array (used for internal functions only)
+def get_facial_landmarks():
+	return getcascades.facial_landmarks()
+
+def get_webcam_frontal_face():
+	facecascade = get_frontal_face_cascade()
+	fdetect.webcam_face_detect_frontal(facecascade)
