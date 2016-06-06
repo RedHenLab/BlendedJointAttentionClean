@@ -5,7 +5,7 @@ import getcascades
 def video_read(height, width):
 	cam = cv2.VideoCapture(-1)
 	cam.set(3, width)
-	cam.set(4, heigth)
+	cam.set(4, height)
 	video_capture = cam
 	return video_capture
 
