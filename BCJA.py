@@ -21,9 +21,11 @@
 import fdetect
 import getcascades
 
-#Returns a 3 element array
+# Returns a 3 element array (used for internal functions only)
 def get_frontal_face_cascade():
 	return getcascades.frontal_face()
 
+# Returns a 2 element array (used for internal functions only)
 def get_profile_face_cascade():
 	return getcascades.profile_face()
+
