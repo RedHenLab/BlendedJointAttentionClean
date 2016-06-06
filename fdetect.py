@@ -2,17 +2,18 @@ import cv2
 import sys
 import getcascades
 
-def video_capture(height, width):
+def video_read(height, width):
 	cam = cv2.VideoCapture(-1)
 	cam.set(3, width)
 	cam.set(4, heigth)
 	video_capture = cam
-	return video_capture.read()
+	return video_capture
 
 def webcam_face_detect_frontal():
 	facecascade = getcascades.frontal_face()
+	video = video_read(480,640)
 	while True:
-		ret, frame = video_capture(480,640)
+		ret, frame = video.read()
 		if ret:
 	        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 	        for i in range(len(facecascade)):
@@ -25,5 +26,5 @@ def webcam_face_detect_frontal():
 	        if cv2.waitKey(1) & 0xFF == ord('q'):
 	            break
 	# Release video capture
-	video_capture.release()
+	video.release()
 	cv2.destroyAllWindows()
