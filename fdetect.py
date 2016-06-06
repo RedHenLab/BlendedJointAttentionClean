@@ -9,8 +9,7 @@ def video_read(height, width):
 	video_capture = cam
 	return video_capture
 
-def webcam_face_detect_frontal():
-	facecascade = getcascades.frontal_face()
+def webcam_face_detect_frontal(facecascade):
 	video = video_read(480,640)
 	while True:
 		ret, frame = video.read()
