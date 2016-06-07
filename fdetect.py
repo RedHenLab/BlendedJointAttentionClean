@@ -20,7 +20,8 @@ def webcam_face_detect_frontal(facecascade):
 		        # Draw a rectangle around the faces
 		        for (x, y, w, h) in faces:
 		            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
-		            print("true")
+		            print("Face detected")
+		            break
 	        # Display the resulting frame
 	        # print(type(frame))
 	        if frame.any()>0:
@@ -30,3 +31,5 @@ def webcam_face_detect_frontal(facecascade):
 	# Release video capture
 	video.release()
 	cv2.destroyAllWindows()
+
+
