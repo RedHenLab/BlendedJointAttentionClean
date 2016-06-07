@@ -33,6 +33,10 @@ def get_profile_face_cascade():
 def get_facial_landmarks():
 	return getcascades.facial_landmarks()
 
+def get_webcam_frontal_face_single():
+	facecascade = get_frontal_face_cascade()
+	fdetect.webcam_face_detect_frontal_single(facecascade)
+
 def get_webcam_frontal_face():
 	facecascade = get_frontal_face_cascade()
 	fdetect.webcam_face_detect_frontal(facecascade)
