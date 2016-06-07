@@ -40,3 +40,12 @@ def get_webcam_frontal_face_single():
 def get_webcam_frontal_face():
 	facecascade = get_frontal_face_cascade()
 	fdetect.webcam_face_detect_frontal(facecascade)
+
+def get_webcam_profile_face_single():
+	facecascade = get_frontal_face_cascade()
+	fdetect.webcam_face_detect_frontal_single(facecascade)
+
+def get_webcam_profile_face():
+	facecascade = get_frontal_face_cascade()
+	fdetect.webcam_face_detect_frontal_single(facecascade)
+
