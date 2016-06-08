@@ -56,3 +56,7 @@ def get_webcam_profile_face():
 	facecascade = get_profile_face_cascade()
 	fdetect.webcam_face_detect(facecascade)
 
+def get_webcam_face_template():
+	facecascade = [get_profile_face_cascade().get_frontal_face_cascade()]
+	fdetect.webcam_face_detect_template_matching(facecascade)
+
