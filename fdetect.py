@@ -55,7 +55,12 @@ def webcam_face_detect(facecascade):
 	cv2.destroyAllWindows()
 
 def webcam_face_detect_template_matching(facecascade):
-	
+	frame_number = 0
+	flag = 0
+	last_x = 0
+	last_y = 0
+	last_w = 0
+	last_h = 0
 	video = video_read(480,640)
 	while True:
 		ret, frame = video.read()
