@@ -55,25 +55,27 @@ def webcam_face_detect(facecascade):
 	cv2.destroyAllWindows()
 
 def webcam_face_detect_template_matching(facecascade):
+	
 	video = video_read(480,640)
 	while True:
 		ret, frame = video.read()
 		if ret:
 			if flag == 0:
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
-            # Draw a rectangle around the faces
-            for (x, y, w, h) in faces1:
-                template = gray[y:y+h, x:x+w]
-                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
-                roi_gray = gray[(y-10):(y+h+10), (x-10):(x+w+10)]
-                roi_gray2 = gray[(y-20):(y+h+20), (x-20):(x+w+20)]
-                last_x = x
-                last_y = y
-                last_h = h
-                last_w = w
-                flag = 1
-                frame_number=frame_number+1
+            for i in range(len(facecascade)):
+            	faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
+	            # Draw a rectangle around the faces
+	            for (x, y, w, h) in faces1:
+	                template = gray[y:y+h, x:x+w]
+	                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
+	                roi_gray = gray[(y-10):(y+h+10), (x-10):(x+w+10)]
+	                roi_gray2 = gray[(y-20):(y+h+20), (x-20):(x+w+20)]
+	                last_x = x
+	                last_y = y
+	                last_h = h
+	                last_w = w
+	                flag = 1
+	                break
 
         else :
             flag = 0
