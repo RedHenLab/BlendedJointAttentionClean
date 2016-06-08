@@ -39,12 +39,12 @@ def get_facial_landmarks():
 # Takes input from webcam and detects a single frontal face out of many
 def get_webcam_frontal_face_single():
 	facecascade = get_frontal_face_cascade()
-	fdetect.webcam_face_detect_frontal_single(facecascade)
+	fdetect.webcam_face_detect_single(facecascade)
 
 # Takes input from webcam and detects all frontal faces
 def get_webcam_frontal_face():
 	facecascade = get_frontal_face_cascade()
-	fdetect.webcam_face_detect_frontal(facecascade)
+	fdetect.webcam_face_detect(facecascade)
 
 # Takes input from webcam and detects a single profile face out of many
 def get_webcam_profile_face_single():
