@@ -9,7 +9,7 @@ def video_read(height, width):
 	video_capture = cam
 	return video_capture
 
-def webcam_face_detect_frontal_single(facecascade):
+def webcam_face_detect_single(facecascade):
 	video = video_read(480,640)
 	while True:
 		ret, frame = video.read()
@@ -32,7 +32,7 @@ def webcam_face_detect_frontal_single(facecascade):
 	video.release()
 	cv2.destroyAllWindows()
 
-def webcam_face_detect_frontal(facecascade):
+def webcam_face_detect(facecascade):
 	video = video_read(480,640)
 	while True:
 		ret, frame = video.read()
@@ -53,4 +53,6 @@ def webcam_face_detect_frontal(facecascade):
 	# Release video capture
 	video.release()
 	cv2.destroyAllWindows()
+
+
 
