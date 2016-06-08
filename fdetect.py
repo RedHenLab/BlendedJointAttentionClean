@@ -54,5 +54,6 @@ def webcam_face_detect(facecascade):
 	video.release()
 	cv2.destroyAllWindows()
 
+def webcam_face_detect_template_matching(facecascade):
 
 
