@@ -121,8 +121,8 @@ def webcam_face_detect_template_matching(facecascade):
 	        if cv2.waitKey(1) & 0xFF == ord('q'):
 	            break
 	        print(frame_number)
-# Release video capture
-video_capture.release()
-cv2.destroyAllWindows()
+	# Release video capture
+	video.release()
+	cv2.destroyAllWindows()
 
 
