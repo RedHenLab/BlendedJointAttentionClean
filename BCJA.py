@@ -33,7 +33,11 @@ def get_profile_face_cascade():
 	return getcascades.profile_face()
 
 def get_all_face_cascade():
-	return getcascades.frontal_face().append(getcascades.profile_face())
+	facecascade = getcascades.frontal_face()
+	facecascade1 = getcascades.profile_face()
+	for i in range(len(facecascade1)):
+		facecascade.append(facecascade1[i])
+	return facecascade
 
 # Returns a 2 element array (used for internal functions only)
 def get_facial_landmarks():
@@ -61,7 +65,7 @@ def get_webcam_profile_face():
 
 # Takes input from webcam and detects single face of all kinds
 def get_webcam__face_single():
-	acecascade = get_all_face_cascade()
+	facecascade = get_all_face_cascade()
 	fdetect.webcam_face_detect_single(facecascade)
 
 # Takes input from webcam and detects all face of all kinds
