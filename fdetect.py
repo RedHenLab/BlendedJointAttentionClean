@@ -68,7 +68,7 @@ def webcam_face_detect_template_matching(facecascade):
 			if flag == 0:
 				gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 				for i in range(len(facecascade)):
-					faces1 = faceCascade[i].detectMultiScale(gray, 1.1, 5)
+					faces1 = facecascade[i].detectMultiScale(gray, 1.1, 5)
 					# Draw a rectangle around the faces
 					for (x, y, w, h) in faces1:
 					    template = gray[y:y+h, x:x+w]
