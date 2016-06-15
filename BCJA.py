@@ -80,4 +80,5 @@ def get_webcam_face_template():
 	fdetect.webcam_face_detect_template_matching(facecascade)
 
 def scene_change(video_capture):
+	scenes.scene_change(video_capture)
 
