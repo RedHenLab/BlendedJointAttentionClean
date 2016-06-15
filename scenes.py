@@ -1,6 +1,15 @@
 import cv2
 
 def scene_change(video_capture):
+	cam = cv2.VideoCapture('test.mp4')
+	cam.set(3,640)
+	cam.set(4,480)
+	video_capture = cam
+	frame_num = 0
+	scene_num = 0
+	while True:
+    # Capture frame-by-frame
+    ret, frame = video_capture.read()
 	cv2.ocl.setUseOpenCL(False)
 	fgbg = cv2.createBackgroundSubtractorMOG2()
 	frame_num = 0
