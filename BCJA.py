@@ -70,7 +70,7 @@ def get_webcam__face_single():
 
 # Takes input from webcam and detects all face of all kinds
 def get_webcam__face():
-	acecascade = get_all_face_cascade()
+	facecascade = get_all_face_cascade()
 	fdetect.webcam_face_detect_single(facecascade)
 
 # Takes input from webcam and detects a single face of any kind with template matching boost
