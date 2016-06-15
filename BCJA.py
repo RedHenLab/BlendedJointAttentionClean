@@ -88,6 +88,14 @@ def get_webcam_face_template():
 	facecascade = get_all_face_cascade()
 	fdetect.webcam_face_detect_template_matching(facecascade)
 
+
+
+# ======================================================
+# 
+# Scene change module
+# 
+# ======================================================
+# 
 def scene_change(video_capture):
 	scenes.scene_change(video_capture)
 
