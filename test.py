@@ -11,4 +11,4 @@ import BCJA
 # BCJA.get_webcam__face_single()
 # BCJA.get_webcam__face()
 # BCJA.get_webcam_face_template()
-
+BCJA.scene_change('test.mp4')

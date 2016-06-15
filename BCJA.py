@@ -23,6 +23,16 @@
 
 import fdetect
 import getcascades
+import scenes
+
+
+# ======================================================
+# 
+# Face and facial feature module
+# 
+# ======================================================
+# 
+ 
 
 # Returns a 3 element array (used for internal functions only)
 def get_frontal_face_cascade():
@@ -70,11 +80,22 @@ def get_webcam__face_single():
 
 # Takes input from webcam and detects all face of all kinds
 def get_webcam__face():
-	acecascade = get_all_face_cascade()
+	facecascade = get_all_face_cascade()
 	fdetect.webcam_face_detect_single(facecascade)
 
 # Takes input from webcam and detects a single face of any kind with template matching boost
 def get_webcam_face_template():
 	facecascade = get_all_face_cascade()
 	fdetect.webcam_face_detect_template_matching(facecascade)
+
+
+
+# ======================================================
+# 
+# Scene change module
+# 
+# ======================================================
+# 
+def scene_change(video_capture):
+	scenes.scene_change(video_capture)
 
