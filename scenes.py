@@ -28,6 +28,7 @@ def scene_change(input_file):
 				if flag == 1:
 					break
 		cv2.imshow('Video',fgmask)
+		cv2.imshow('Video',frame)
 		k = cv2.waitKey(30) & 0xff
 		if k == 27:
 			break
