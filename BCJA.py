@@ -25,6 +25,15 @@ import fdetect
 import getcascades
 import scenes
 
+
+# ======================================================
+# 
+# Face and facial feature module
+# 
+# ======================================================
+# 
+ 
+
 # Returns a 3 element array (used for internal functions only)
 def get_frontal_face_cascade():
 	return getcascades.frontal_face()
