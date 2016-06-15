@@ -1,7 +1,7 @@
 import cv2
 
 def scene_change(input_file):
-	cam = cv2.VideoCapture(input_file)
+	cap = cv2.VideoCapture(input_file)
 	video_capture = cap
 	cv2.ocl.setUseOpenCL(False)
 	fgbg = cv2.createBackgroundSubtractorMOG2()
