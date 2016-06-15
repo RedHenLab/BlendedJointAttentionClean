@@ -1,7 +1,7 @@
 import cv2
 
-def scene_change(video_capture):
-	cam = cv2.VideoCapture('test.mp4')
+def scene_change(input_file):
+	cam = cv2.VideoCapture(input_file)
 	cam.set(3,640)
 	cam.set(4,480)
 	video_capture = cam
