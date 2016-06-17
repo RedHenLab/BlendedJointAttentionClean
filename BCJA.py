@@ -99,3 +99,10 @@ def get_webcam_face_template():
 def scene_change(video_capture):
 	scenes.scene_change(video_capture)
 
+
+# ======================================================
+# 
+# Gaze direction module
+# 
+# ======================================================
+# 
