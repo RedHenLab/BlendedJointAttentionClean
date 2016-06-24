@@ -1,5 +1,5 @@
 import cv2
-
+import dlib
 
 def frontal_face():
 	faceCascade1 = cv2.CascadeClassifier('Cascades/haarcascades/haarcascade_frontalface_alt2.xml')

@@ -24,7 +24,7 @@
 import fdetect
 import getcascades
 import scenes
-
+import gaze
 
 # ======================================================
 # 
@@ -74,12 +74,12 @@ def get_webcam_profile_face():
 	fdetect.webcam_face_detect(facecascade)
 
 # Takes input from webcam and detects single face of all kinds
-def get_webcam__face_single():
+def get_webcam_face_single():
 	facecascade = get_all_face_cascade()
 	fdetect.webcam_face_detect_single(facecascade)
 
 # Takes input from webcam and detects all face of all kinds
-def get_webcam__face():
+def get_webcam_face():
 	facecascade = get_all_face_cascade()
 	fdetect.webcam_face_detect_single(facecascade)
 
@@ -99,3 +99,14 @@ def get_webcam_face_template():
 def scene_change(video_capture):
 	scenes.scene_change(video_capture)
 
+
+# ======================================================
+# 
+# Gaze direction module
+# 
+# ======================================================
+# 
+#
+def gaze_direction(video_capture):
+	predictor = getcascades.facial_landmarks()
+	gaze.detect_gaze_direction(video_capture,predictor)
