@@ -108,4 +108,5 @@ def scene_change(video_capture):
 # 
 #
 def gaze_direction(video_capture):
-	gaze.detect_gaze_direction(video_capture)
+	predictor = getcascades.facial_landmarks()
+	gaze.detect_gaze_direction(video_capture,predictor)
