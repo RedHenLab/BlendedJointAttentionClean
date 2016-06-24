@@ -26,6 +26,8 @@ def webcam_face_detect_single(facecascade):
 	        # print(type(frame))
 	        if (type(frame) != 'NoneType'):
 	        	cv2.imshow('Video', frame)
+	        else :
+	        	print("Check camera")
 	        if cv2.waitKey(1) & 0xFF == ord('q'):
 	            break
 	# Release video capture
@@ -48,6 +50,8 @@ def webcam_face_detect(facecascade):
 	        # print(type(frame))
 	        if (type(frame) != 'NoneType'):
 	        	cv2.imshow('Video', frame)
+	        else :
+	        	print("Check camera")
 	        if cv2.waitKey(1) & 0xFF == ord('q'):
 	            break
 	# Release video capture
