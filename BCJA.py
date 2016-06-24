@@ -74,7 +74,7 @@ def get_webcam_profile_face():
 	fdetect.webcam_face_detect(facecascade)
 
 # Takes input from webcam and detects single face of all kinds
-def get_webcam__face_single():
+def get_webcam_face_single():
 	facecascade = get_all_face_cascade()
 	fdetect.webcam_face_detect_single(facecascade)
 
