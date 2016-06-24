@@ -34,15 +34,13 @@ def cross_spread(split):
 	return centre
 
 # Video capture via webcam
-def detect_gaze_direction(video_capture):
+def detect_gaze_direction(video_capture,predictor):
 	cam = cv2.VideoCapture(video_capture)
 	cam.set(3,640)
 	cam.set(4,480)
 	video_capture = cam
 
 	detector = dlib.get_frontal_face_detector()
-	predictor = dlib.shape_predictor('Cascades/dlibcascades/shape_predictor_68_face_landmarks.dat')
-
 
 	while True:
 	    # Capture frame-by-frame
