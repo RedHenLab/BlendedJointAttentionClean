@@ -91,22 +91,23 @@ def webcam_face_detect_template_matching(facecascade):
 	        else :
 	            flag = 0
 	            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-	            faces1 = facecascade.detectMultiScale(roi_gray, 1.1, 5)
-	            
-	            # Draw a rectangle around the faces
-	            for (x, y, w, h) in faces1:
-	                x = last_x+x-10
-	                y = last_y+y-10
-	                cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
-	                roi_gray = gray[(y-10):(y+h+10), (x-10):(x+w+10)]
-	                roi_gray2 = gray[(y-20):(y+h+20), (x-20):(x+w+20)]
-	                template = gray[y:y+h, x:x+w]
-	                last_x = x
-	                last_y = y
-	                last_h = h
-	                last_w = w
-	                flag = 1
-	                frame_number=frame_number+1
+	            for i in range(len(facecascade)):
+			        faces1 = facecascade[i].detectMultiScale(roi_gray, 1.1, 5)
+		            
+		            # Draw a rectangle around the faces
+		            for (x, y, w, h) in faces1:
+		                x = last_x+x-10
+		                y = last_y+y-10
+		                cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
+		                roi_gray = gray[(y-10):(y+h+10), (x-10):(x+w+10)]
+		                roi_gray2 = gray[(y-20):(y+h+20), (x-20):(x+w+20)]
+		                template = gray[y:y+h, x:x+w]
+		                last_x = x
+		                last_y = y
+		                last_h = h
+		                last_w = w
+		                flag = 1
+		                frame_number=frame_number+1
 
 	        if flag == 0 and frame_number != 0:
 	            # Apply template Matching
