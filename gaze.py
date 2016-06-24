@@ -2,17 +2,20 @@ import cv2
 import numpy as np
 import dlib 
 
+# For internal use only
 def process_eye(split):
 	split = cv2.GaussianBlur(split,(5,5),0)
 	split = cv2.adaptiveThreshold(split,255,cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY,11,2)
 	split = cv2.dilate(split, None, iterations=1)
 	return split
 
+# For internal use only
 def filter_eye(split):
 	split = cv2.medianBlur(split,5)
 	split = cv2.bilateralFilter(split,9,75,75)
 	return split
 
+# For internal use only
 def cross_spread(split):
 	first= [0,0]
 	last = [split.shape[1],split.shape[0]]
