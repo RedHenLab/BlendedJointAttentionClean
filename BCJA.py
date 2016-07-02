@@ -120,3 +120,6 @@ def gaze_direction(video_capture):
 # 
 # ======================================================
 # 
+
+def head_pose(video_capture):
+	
