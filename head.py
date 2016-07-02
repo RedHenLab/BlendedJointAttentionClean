@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 import dlib 
+import fdetect
 
-# Video capture via webcam
 cam = cv2.VideoCapture(-1)
 cam.set(3,640)
 cam.set(4,480)
