@@ -11,6 +11,8 @@ video_capture = cam
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('../dlibcascades/shape_predictor_68_face_landmarks.dat')
 
+def face_pose(facecascade):
+	video = video_read(480,640)
 while True:
     # Capture frame-by-frame
 	ret, frame = video_capture.read()
