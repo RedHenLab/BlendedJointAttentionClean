@@ -122,4 +122,5 @@ def gaze_direction(video_capture):
 # 
 
 def head_pose(video_capture):
-	
+	predictor = getcascades.facial_landmarks()
+	head.face_pose(video_capture,predictor)
