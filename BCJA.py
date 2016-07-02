@@ -25,6 +25,7 @@ import fdetect
 import getcascades
 import scenes
 import gaze
+import head
 
 # ======================================================
 # 
@@ -110,3 +111,16 @@ def scene_change(video_capture):
 def gaze_direction(video_capture):
 	predictor = getcascades.facial_landmarks()
 	gaze.detect_gaze_direction(video_capture,predictor)
+
+
+
+# ======================================================
+# 
+# Head pose and context module
+# 
+# ======================================================
+# 
+
+def head_pose(video_capture):
+	predictor = getcascades.facial_landmarks()
+	head.face_pose(video_capture,predictor)
