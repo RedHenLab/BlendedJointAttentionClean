@@ -1,25 +1,22 @@
 # 
-#    _ _ _     _ _ _ _   _ _ _ _   _ _ _ _ 
-#   /\  _ `\  /\  _ _ _\/\_ _ _  \/\  _ _ `\
-#   \ \ \_\ \_\ \ \_ _ /\/_ _ _/\ \ \ \   \ \
-#    \ \  _ _ `\ \ \        _  \ \ \ \ \_ _\ \
-#     \ \ \_ _\ \ \ \_ _ _ /\`\_\/  \ \  _ _  \
-#      \ \_ _ _ _\ \_ _ _ _\ \_ _ _ _\ \_\_ /\_\
-#       \/_ _ _ _/\/_ _ _ _/\/_ _ _ _/\/_/  \/_/ 
+#    _____         _______       _______       _______ 
+#   /\  _  \      /\  _____\    /\_____  \    /\  ___  \
+#   \ \ \_\ \_    \ \ \___ /    \/_____/\ \   \ \ \   \ \
+#    \ \  ___  \   \ \ \            _  \ \ \   \ \ \___\ \
+#     \ \ \___\ \   \ \ \_____     /\ \_\/  \   \ \  ___  \
+#      \ \_______\   \ \_______\   \ \_______\   \ \_\__/\_\
+#       \/_______/    \/______/    \/_______/    \/_/  \/_/ 
 #
-#	================================================
-# 	Library used to detect facial features, gestures
-#	and other thigs, finally used to detect and cla-
-#	-ssify different instances of blended classical
-#	joint attention. For further information and us-
-#	-age see ReadMe.md. 
-#	================================================
-#
-#	Liscence is hereby provided to everyone abiding
-#	by the liscecnces of the dependencies to use this
-#	library when and where needed without a need to 
-# 	state. 
-#	================================================
+#	======================================================
+# 	Library used to detect facial features, gestures and 
+#       other thigs, finally used to detect and classify 
+#       different instances of blended classical joint attention. 
+#       For further information and usage see README.md
+#	=======================================================
+#	License is hereby provided to everyone abiding by the licences 
+#       of the dependencies to use this library when and where needed 
+#       without a need to state
+#	=======================================================
 
 import fdetect
 import getcascades
